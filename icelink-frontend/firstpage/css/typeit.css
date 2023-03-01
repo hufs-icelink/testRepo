@@ -1,0 +1,38 @@
+:root {
+    --ti-cursor-margin-left: 0.1em;
+    --ti-cursor-color: rgb(66, 66, 66);
+  }
+  .greeting{
+    text-align:center;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../img/background.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  h1 {
+    margin-bottom: 0px;
+  }
+  .doScroll{
+    margin-top:-80px;
+    margin-bottom:20px;
+    text-align:center;
+    color:white;
+    font-size:1rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  .scroll1{
+    height:50vh;
+    background-image: url('../img/hufs.jpg');
+    background-size:cover;
+    background-position: center;
+    height:100vh;
+  }
