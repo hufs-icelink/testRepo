@@ -27,6 +27,8 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+*.yml
+application.properties
 
 ### NetBeans ###
 /nbproject/private/
@@ -38,7 +40,6 @@ out/
 ### VS Code ###
 .vscode/
 
-*.yml
-application.properties
+
 
 
