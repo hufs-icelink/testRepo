@@ -1,6 +1,6 @@
 HELP.md
 .gradle
-*.yml
+
 
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -38,5 +38,7 @@ out/
 ### VS Code ###
 .vscode/
 
+*.yml
+application.properties
 
 
