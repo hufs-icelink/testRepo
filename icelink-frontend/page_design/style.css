@@ -1,0 +1,102 @@
+.logo{
+    width: 100px;
+    height:25px;
+    text-align:center;
+    border: 1px solid black;
+    float:left;
+    margin-left:5%;
+}
+.myPage{
+    margin-left:10px;
+}
+.myPage, .search, .board, .sign_o{
+    margin-top:2px;
+    width:120px;
+    height:20px;
+    text-align:center;
+    border:1px solid black;
+    float:left;  
+}
+.menubar{
+    width: 500px;
+    height:25px;
+    text-align:center;
+    border: 1px solid black;
+    float:right;
+    margin-right:5%;
+}
+
+.profile{
+    width:50px;
+    height:60px;
+    border: 1px solid black;
+    overflow:hidden;
+    margin-top:20%;
+    margin-left:37%;
+}
+.middle{
+    width:61.5%;
+    float:left;
+    margin-left:10px;
+    margin-right:10px;
+}
+.hotboard{
+    width:100%;
+    height:120px;
+    border: 1px solid black;
+
+}
+.mainboard{
+    float:left;
+    width:100%;
+    height:500px;
+    border: 1px solid black;
+    text-align:center;
+    margin-top:10px;
+}
+img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.empty{
+    height:30px;
+    clear:both;
+    width:100%;
+}
+.container{
+    width:200px;
+    height:300px;
+    border: 1px solid black;
+    text-align:center;
+    float:left;
+    margin-left:5%;
+}
+
+.recommand{
+    width:200px;
+    height: 300px;
+    margin-right: 5%;
+    text-align:center;
+    border: 1px solid black;
+    float:right;
+}
+.record{
+    width:200px;
+    height: 300px;
+    margin-right: 5%;
+    text-align:center;
+    border: 1px solid black;
+    float:right;
+    margin-top:80px;
+}
+
+.gathering, .finished{
+    float:left;
+    text-align:center;
+    border: 1px solid black;
+    width:48%;
+    margin-left :1%;
+    height:98%
+}
+
