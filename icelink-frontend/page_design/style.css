@@ -100,3 +100,36 @@ img{
     height:98%
 }
 
+.midBoard{
+    text-align:center;
+    margin:auto;
+    width:70%;
+    clear:both;
+}
+
+.searchBoard{
+    margin-top: 10px;
+    width:100%;
+    height:50px;
+}
+
+.gather, .doing, .done{
+    float:left;
+    text-align:center;
+    border: 1px solid black;
+    width:33%;
+    height:50px;
+}
+
+.searchResult{
+    margin-top: 10px;
+    width:100%;
+    height:700px;
+}
+
+.result1, .result2, .result3{
+    text-align:center;
+    border: 1px solid black;
+    width:100%;
+    height:33%;
+}
