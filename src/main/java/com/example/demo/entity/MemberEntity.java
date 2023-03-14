@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+
+
 @Getter
 @Setter
 @Entity //entity 정의 --> 스프링으로 db 테일블 생성
