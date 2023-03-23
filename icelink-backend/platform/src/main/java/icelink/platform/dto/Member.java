@@ -11,6 +11,8 @@ import java.sql.Timestamp;
 @Data
 @Builder
 @Entity
+@Setter
+@Getter
 public class Member {
 
     @Id //PK 지정
@@ -23,8 +25,17 @@ public class Member {
     @Column(nullable = false, length = 300)
     private String password;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = true, length = 100)
     private String email;
+
+    @Column(nullable = true, length = 100)
+    private String githubId;
+
+    @Column(nullable = true, length = 100)
+    private String tistoryId;
+
+    @Column(nullable = true, length = 100)
+    private String velogId;
 
     @Enumerated(EnumType.STRING)
     private RoleType role;
