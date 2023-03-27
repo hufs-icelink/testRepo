@@ -28,7 +28,7 @@ function Board({ props }) {
               <Link to="/Continue" style={{ textDecoration: "none" }}>진행중</Link>
               </div>
               <div class="done">
-              <Link to="/End" style={{ textDecoration: "none" }}>End</Link>
+              <Link to="/End" style={{ textDecoration: "none" }}>완료</Link>
               </div>
             </div>
             <div class="searchResult">
