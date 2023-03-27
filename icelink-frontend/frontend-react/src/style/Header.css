@@ -1,29 +1,16 @@
-.logo{
-    width: 100px;
+/* .logoLink{
+    width: 80px;
     height:25px;
     text-align:center;
     border: 1px solid black;
     float:left;
-    margin-top:10px;
-    margin-left:5%;
-}
-.myPage{
-    margin-left:10px;
-}
-.myPage, .search, .board, .signin, .signup{
+} */
+
+.logoLink, .myPageLink, .search, .boardLink, .signin, .signup{
     margin-top:2px;
-    width:120px;
+    width:80px;
     height:20px;
     text-align:center;
     border:1px solid black;
     float:left;  
-}
-.menubar{
-    margin-top: 10px;
-    width: 530px;
-    height:25px;
-    text-align:center;
-    border: 1px solid black;
-    float:right;
-    margin-right:5%;
 }

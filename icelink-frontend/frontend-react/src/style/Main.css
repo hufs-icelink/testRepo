@@ -18,12 +18,15 @@
     float:left;  
 }
 .menubar{
-    width: 500px;
+    width:auto;
+    margin-top: 10px;
     height:25px;
     text-align:center;
     border: 1px solid black;
     float:right;
     margin-right:5%;
+    margin-bottom:50px;
+    clear:both;
 }
 
 .profile{
@@ -31,7 +34,7 @@
     height:60px;
     border: 1px solid black;
     overflow:hidden;
-    margin-top:20%;
+    margin-top:50px;
     margin-left:37%;
 }
 .middle{
@@ -71,6 +74,7 @@ img{
     text-align:center;
     float:left;
     margin-left:5%;
+    margin-top:64px;
 }
 
 .recommand{
