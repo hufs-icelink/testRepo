@@ -5,6 +5,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 import java.util.ArrayList;
 
+@CrossOrigin("*")
 @RestController
 public class CrawlingApiController {
     @GetMapping("/github/{id}")
@@ -119,4 +121,20 @@ public class CrawlingApiController {
 
         return sb.toString();
     }
+
+    @GetMapping("/api/hello")
+    public String hello() {
+        return "백엔드에서 준다 임마";
+    }
+
+    @GetMapping("/api/junjoy")
+    public String mmj() {
+        return "잠은 네이버에서 ";
+    }
+
+    @GetMapping("/api/no")
+    public String no() {
+        return "잠은 집에서";
+    }
+
 }
