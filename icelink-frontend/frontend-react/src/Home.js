@@ -1,5 +1,6 @@
 import React from "react";
 import "./style/Main.css";
+import "./style/Header.css";
 import profileimg from "./img/profileimg.png";
 function Home(props) {
   return (
