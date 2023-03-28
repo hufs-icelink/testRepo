@@ -1,0 +1,18 @@
+package com.hufs.icelink.service;
+
+import com.hufs.icelink.entity.User;
+import com.hufs.icelink.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository userRepository;
+
+    public void write(User user){
+        userRepository.save(user);
+    }
+
+
+}
