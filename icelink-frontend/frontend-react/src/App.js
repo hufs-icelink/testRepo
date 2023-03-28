@@ -7,9 +7,8 @@ import SignIn from "./SignIn";
 
 function App () {
     return (
-      <BrowserRouter>
-        <Header /> <br />
-      </BrowserRouter>
+      <div>
+      <Header /> <br /></div>
     );
 }
 
