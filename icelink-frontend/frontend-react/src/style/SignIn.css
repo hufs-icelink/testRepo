@@ -34,6 +34,7 @@
 	width: 465px;
 	height :48px;
 	border: solid 1px gray;
+	border-radius: 0.5rem;
 	background: white;
 }
 .password-wrap{
@@ -57,4 +58,5 @@
 	background: #000000;
 	color: white;
 	border: solid 1px #000000;
+	border-radius: 0.5rem;
 }
