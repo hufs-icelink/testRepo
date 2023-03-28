@@ -56,3 +56,24 @@
     margin-top:20px;
     font-size:13px;
 }
+
+.right{
+    margin-right:10%;
+}
+.recommand{
+    width:200px;
+    height: 300px;
+    text-align:center;
+    border: 2px solid rgb(159, 159, 159);
+    border-radius: 0.5rem;
+    float:right;
+}
+.record{
+    width:200px;
+    height: 300px;
+    text-align:center;
+    border: 2px solid rgb(159, 159, 159);
+    border-radius: 0.5rem;
+    float:right;
+    margin-top:80px;
+}
