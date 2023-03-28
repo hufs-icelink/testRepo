@@ -11,7 +11,7 @@ import profileimg from "./img/profileimg.png";
 function Board({ props }) {
   return (
     <div>
-      <div class="container">
+      <div class="profile-container">
         <div class="profile">
           <img id="image" src={profileimg} height="200" />
         </div>
@@ -44,9 +44,22 @@ function Board({ props }) {
           </div>
         </div>
       </BrowserRouter>
+      <div class="right">
+        <div class="recommand">
+          <p>추천</p>
+        </div>
+        <div class="record">
+          <p>랭킹 1~10등</p>
+          <div class="recordList">
+            <p>1등: 노현아</p>
+            <p>2등: 현아아님</p>
+            <p>3등: gusdksepdy</p>
+            <p>4등: 뿌링클</p>
+            <p>5등: 레드윙</p>
+          </div>
+        </div>
       </div>
-
-
+    </div>
   );
 }
 export default Board;
