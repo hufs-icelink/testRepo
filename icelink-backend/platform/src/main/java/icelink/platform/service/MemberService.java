@@ -6,8 +6,12 @@ import icelink.platform.dto.RoleType;
 import icelink.platform.repository.MemberRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.security.PublicKey;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -43,6 +47,13 @@ public class MemberService {
         });
 
         return member;
+    }
+
+    @Transactional
+    public List<Member> rankMember() {
+        List<Member> members = memberRepository.findAll(Sort.by(Sort.Direction.DESC, "points"));
+
+        return members.subList(0, 10);
     }
 
 

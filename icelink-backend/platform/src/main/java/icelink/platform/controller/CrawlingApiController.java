@@ -34,9 +34,47 @@ public class CrawlingApiController {
     @GetMapping("/velog/{id}")
     public String crawlingVelog(@PathVariable("id") String velogUserId) throws IOException {
 
-        StringBuilder sb= new StringBuilder();
-        sb.append("<p> velog 작성 리스트 </p>");
+        StringBuilder sb = new StringBuilder();
+//        sb.append("<p> velog 작성 리스트 </p>");
 
+        String velogUrl = "https://velog.io/@" + velogUserId + "/series/Python";;
+
+        Document document = Jsoup.connect(velogUrl).get();
+
+        Elements tagA = document.select("a");
+
+        int count = 0;
+        ArrayList<String> url_list = new ArrayList<>();
+
+        for (Element element : tagA) {
+
+            String tempElement = element.attr("href").toString();
+            if (tempElement.contains(velogUserId + "/")
+                    && !tempElement.contains("series")
+                    && !tempElement.contains("about")
+            ) {
+                count++;
+                if (count % 2 == 1) {
+                    url_list.add("https://velog.io"+tempElement);
+                }
+            }
+        }
+
+
+        for(int i = 0; i < url_list.size(); i++) {
+            document = Jsoup.connect(url_list.get(i)).get();
+            sb.append(document.text() + "\n");
+        }
+
+        return sb.toString();
+    }
+
+    @GetMapping("/velog")
+    public String velogJunjoy() throws IOException {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("<p> velog 작성 리스트 </p>");
+        String velogUserId = "sjb2010";
         String velogUrl = "https://velog.io/@" + velogUserId;
 
         Document document = Jsoup.connect(velogUrl).get();
@@ -44,30 +82,31 @@ public class CrawlingApiController {
         Elements tagA = document.select("a");
 
         int count = 0;
-        for(Element element : tagA) {
+        for (Element element : tagA) {
 
             String tempElement = element.attr("href").toString();
-            if(tempElement.contains(velogUserId+"/")
+            if (tempElement.contains(velogUserId + "/")
                     && !tempElement.contains("series")
                     && !tempElement.contains("about")
             ) {
-               count++;
-               if(count % 2 == 1) {
-                   sb.append(
-                           "<p><a href=https://velog.io" + tempElement + ">"
-                                   + (int)(count/2 + 1) + "번째." + tempElement
-                                   + "</p>"
-                   );
-
-               }
+                count++;
+                if (count % 2 == 1) {
+                    sb.append(
+                            "<p><a href=https://velog.io" + tempElement + ">"
+                                    + (int) (count / 2 + 1) + "번째." + tempElement
+                                    + "</p>"
+                    );
+                }
             }
         }
-
 
         return sb.toString();
     }
 
-    @GetMapping("tistory/{id}")
+
+
+
+    @GetMapping("api/tistory/{id}")
     public String crawlingTistory(@PathVariable("id") String tistoryUserId) throws IOException {
 
         StringBuilder sb = new StringBuilder();
@@ -112,6 +151,7 @@ public class CrawlingApiController {
             page_count += 1;
         }
 
+
         for (int i = 0; i < url_list.size(); i++) {
 
             sb.append("<p><a href=" + tistoryUrl_origin + url_list.get(i).attr("href") + ">"
@@ -119,8 +159,10 @@ public class CrawlingApiController {
                     + "</p>");
         }
 
+
         return sb.toString();
     }
+
 
     @GetMapping("/api/hello")
     public String hello() {
