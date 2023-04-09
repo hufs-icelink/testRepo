@@ -21,32 +21,21 @@ public class MemberService {
     private MemberRepository memberRepository;
 
     @Transactional
-    public void join(String id, String password, String role) {
-        Member member = new Member();
-        member.setUserName(id);
-        member.setPassword(password);
+    public void join(Member member) {
 
-        role = role.toLowerCase();
-        if(role.equals("admin")) {
-            member.setRole(RoleType.ADMIN);
-        }
-        else if (role.equals("junior")) {
-            member.setRole(RoleType.JUNIOR);
-        }
-        else {
-            member.setRole(RoleType.ENTERPRISE);
-        }
-
+        member.setRole(RoleType.JUNIOR);
         memberRepository.save(member);
     }
     @Transactional
-    public Member login(String userName, String password) {
+    public Member login(Member member) {
 
-        Member member = memberRepository.findByUserNameAndPassword(userName, password).orElseGet(()-> {
+        Member m1 = memberRepository.findByUserNameAndPassword(member.getUserName(), member.getPassword()).orElseGet(()-> {
             return null;
         });
 
-        return member;
+        System.out.println("로그인 완료");
+
+        return m1;
     }
 
     @Transactional

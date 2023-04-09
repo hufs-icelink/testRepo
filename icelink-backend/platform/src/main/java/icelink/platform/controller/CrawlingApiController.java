@@ -1,5 +1,7 @@
 package icelink.platform.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,8 +18,11 @@ import java.util.ArrayList;
 @CrossOrigin("*")
 @RestController
 public class CrawlingApiController {
-    @GetMapping("/github/{id}")
-    public String crawlingGithub(@PathVariable("id") String gitUserId) throws IOException {
+    @GetMapping("/member/github")
+    public String crawlingGithub(HttpServletRequest request) throws IOException {
+
+        HttpSession session = request.getSession();
+        String gitUserId = (String) session.getAttribute("githubId");
 
         String gitUrl = "https://raw.githubusercontent.com/" + gitUserId + "/" + gitUserId + "/main/README.md";
 
@@ -31,8 +36,11 @@ public class CrawlingApiController {
 
         return document.toString();
     }
-    @GetMapping("/velog/{id}")
-    public String crawlingVelog(@PathVariable("id") String velogUserId) throws IOException {
+    @GetMapping("/member/velog")
+    public String crawlingVelog(HttpServletRequest request) throws IOException {
+
+        HttpSession session = request.getSession();
+        String velogUserId = (String) session.getAttribute("velogId");
 
         StringBuilder sb = new StringBuilder();
 //        sb.append("<p> velog 작성 리스트 </p>");
@@ -69,47 +77,14 @@ public class CrawlingApiController {
         return sb.toString();
     }
 
-    @GetMapping("/velog")
-    public String velogJunjoy() throws IOException {
+
+    @GetMapping("/member/tistory")
+    public String crawlingTistory(HttpServletRequest request) throws IOException {
 
         StringBuilder sb = new StringBuilder();
-        sb.append("<p> velog 작성 리스트 </p>");
-        String velogUserId = "sjb2010";
-        String velogUrl = "https://velog.io/@" + velogUserId;
 
-        Document document = Jsoup.connect(velogUrl).get();
-
-        Elements tagA = document.select("a");
-
-        int count = 0;
-        for (Element element : tagA) {
-
-            String tempElement = element.attr("href").toString();
-            if (tempElement.contains(velogUserId + "/")
-                    && !tempElement.contains("series")
-                    && !tempElement.contains("about")
-            ) {
-                count++;
-                if (count % 2 == 1) {
-                    sb.append(
-                            "<p><a href=https://velog.io" + tempElement + ">"
-                                    + (int) (count / 2 + 1) + "번째." + tempElement
-                                    + "</p>"
-                    );
-                }
-            }
-        }
-
-        return sb.toString();
-    }
-
-
-
-
-    @GetMapping("api/tistory/{id}")
-    public String crawlingTistory(@PathVariable("id") String tistoryUserId) throws IOException {
-
-        StringBuilder sb = new StringBuilder();
+        HttpSession session = request.getSession();
+        String tistoryUserId = (String) session.getAttribute("tistoryId");
 
         ArrayList<Element> url_list = new ArrayList<>();
         ArrayList<String> duplicated_list = new ArrayList<>();
