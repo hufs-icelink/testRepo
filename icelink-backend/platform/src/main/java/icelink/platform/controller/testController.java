@@ -1,19 +1,20 @@
 package icelink.platform.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
+import icelink.platform.dto.Mail;
+import icelink.platform.service.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.io.IOException;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class testController {
+
+    private final EmailService emailService;
+
+    public testController(EmailService emailService) {
+        this.emailService = emailService;
+    }
+
     @GetMapping("/")
     public String index() {
         return "index.html";
@@ -24,7 +25,24 @@ public class testController {
         return "mypage.html";
     }
 
+    @GetMapping("/mail/send")
+    public String main() {
+        return "mail.html";
+    }
 
+    @PostMapping("/mail/send")
+    public String sendMail(Mail mail) {
+        emailService.sendSimpleMessage(mail);
+        System.out.println("메일 전송 완료");
+        return "mailcheck.html";
+    }
 
+    @PostMapping("/mail/check")
+    public String checkMail(Mail mail) {
+        if(emailService.checkEmail(mail)) {
+            return "index.html";
+        }
+        return "mailcheck.html";
+    }
 
 }

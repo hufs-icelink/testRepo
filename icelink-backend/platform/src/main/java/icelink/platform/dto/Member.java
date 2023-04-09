@@ -37,6 +37,9 @@ public class Member {
     @Column(nullable = true, length = 100)
     private String velogId;
 
+    @Column
+    private String points;
+
     @Enumerated(EnumType.STRING)
     private RoleType role;
 
