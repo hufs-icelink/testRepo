@@ -1,22 +1,29 @@
 package icelink.platform.controller;
 
+import icelink.platform.dto.Board;
 import icelink.platform.dto.Member;
+import icelink.platform.repository.BoardRepository;
+import icelink.platform.repository.MemberRepository;
 import icelink.platform.service.MemberService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
-import java.net.http.HttpRequest;
 import java.util.List;
 
 @RestController
 public class ApiController {
 
+    private final MemberRepository memberRepository;
+
+    private final BoardRepository boardRepository;
+
     private final MemberService memberService;
 
-    public ApiController(MemberService memberService) {
+    public ApiController(MemberService memberService, MemberRepository memberRepository, BoardRepository boardRepository) {
         this.memberService = memberService;
+        this.memberRepository = memberRepository;
+        this.boardRepository = boardRepository;
     }
 
 
@@ -52,6 +59,7 @@ public class ApiController {
         session.setAttribute("tistoryId", m1.getTistoryId());
         session.setAttribute("velogId", m1.getVelogId());
         session.setAttribute("role", m1.getRole());
+        session.setAttribute("email", m1.getEmail());
 
         session.setMaxInactiveInterval(30*60);
 
@@ -59,4 +67,17 @@ public class ApiController {
 
     }
 
+    @PostMapping("/board/new")
+    public void newBoard(@RequestBody Board board, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+
+        Member m1 = memberRepository.findByUserName((String)session.getAttribute("userName")).orElseGet(()-> {
+            return null;
+        });
+
+        board.setMember(m1);
+
+        boardRepository.save(board);
+
+    }
 }

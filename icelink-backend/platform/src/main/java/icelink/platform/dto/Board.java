@@ -28,6 +28,9 @@ public class Board {
     @Lob // 대용량 데이터
     private String content;
 
+    @Column
+    private String boardType;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId")
     private Member member;

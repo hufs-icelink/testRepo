@@ -2,6 +2,8 @@ package icelink.platform.service;
 
 
 import icelink.platform.dto.Mail;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -15,15 +17,15 @@ import java.util.Random;
 public class EmailService {
 
     private JavaMailSender emailSender;
-
     public static final String key = randomCode();
+    public void sendSimpleMessage(HttpServletRequest request) {
 
-
-    public void sendSimpleMessage(Mail mailDto) {
+        HttpSession session = request.getSession();
+        String address = (String) session.getAttribute("email");
 
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("hoyoung.wjd@gmail.com");
-        message.setTo(mailDto.getAddress());
+        message.setTo(address);
         message.setSubject("인증코드입니다.");
         message.setText("Icelink 플랫폼을 이용해주셔서 감사합니다. \n\n인증번호는 다음과 같습니다: " + key);
         emailSender.send(message);

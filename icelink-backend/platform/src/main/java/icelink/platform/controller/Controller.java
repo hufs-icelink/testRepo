@@ -60,8 +60,8 @@ public class Controller {
     }
 
     @PostMapping("/mail/send")
-    public String sendMail(Mail mail) {
-        emailService.sendSimpleMessage(mail);
+    public String sendMail(HttpServletRequest request) {
+        emailService.sendSimpleMessage(request);
         System.out.println("메일 전송 완료");
         return "mailcheck.html";
     }
@@ -72,6 +72,11 @@ public class Controller {
             return "index.html";
         }
         return "mailcheck.html";
+    }
+
+    @GetMapping("/board")
+    public String newBoard() {
+        return "board.html";
     }
 
 }

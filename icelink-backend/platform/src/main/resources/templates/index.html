@@ -1,12 +1,14 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>인덱스</title>
 </head>
 <body>
     <h1>메인화면</h1>
+
+    <form th:action="@{/mail/send}" method="post">
+        <button>인증번호 발송</button>
+    </form>
 </body>
 </html>
