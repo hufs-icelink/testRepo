@@ -42,7 +42,9 @@ public class MemberService {
     public List<Member> rankMember() {
         List<Member> members = memberRepository.findAll(Sort.by(Sort.Direction.DESC, "points"));
 
-        return members.subList(0, 10);
+        int lastIndex = Math.min(members.size(), 10);
+        return members.subList(0, lastIndex);
+
     }
 
 

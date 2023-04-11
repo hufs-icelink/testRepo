@@ -4,6 +4,7 @@ import icelink.platform.dto.Board;
 import icelink.platform.dto.Member;
 import icelink.platform.repository.BoardRepository;
 import icelink.platform.repository.MemberRepository;
+import icelink.platform.service.BoardService;
 import icelink.platform.service.MemberService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -16,14 +17,14 @@ public class ApiController {
 
     private final MemberRepository memberRepository;
 
-    private final BoardRepository boardRepository;
+    private final BoardService boardService;
 
     private final MemberService memberService;
 
-    public ApiController(MemberService memberService, MemberRepository memberRepository, BoardRepository boardRepository) {
+    public ApiController(MemberService memberService, MemberRepository memberRepository, BoardService boardService) {
         this.memberService = memberService;
         this.memberRepository = memberRepository;
-        this.boardRepository = boardRepository;
+        this.boardService = boardService;
     }
 
 
@@ -76,8 +77,11 @@ public class ApiController {
         });
 
         board.setMember(m1);
+        boardService.save(board);
+    }
 
-        boardRepository.save(board);
-
+    @GetMapping("/boardList")
+    public List<Board> boardList() {
+        return boardService.getBoardList();
     }
 }
