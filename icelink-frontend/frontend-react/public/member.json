@@ -1,0 +1,124 @@
+{
+    "members":[
+    {
+      "memberNum": 1,
+      "userName": "qwfsa",
+      "password": "13",
+      "email": "das",
+      "githubId": "as",
+      "tistoryId": "d312",
+      "velogId": "d1wdw",
+      "points": "8",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 7,
+      "userName": "ascvzxd",
+      "password": "123",
+      "email": "hd",
+      "githubId": "231",
+      "tistoryId": "d4",
+      "velogId": "addqs",
+      "points": "8",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 6,
+      "userName": "qrdf",
+      "password": "123",
+      "email": "kg",
+      "githubId": "asdf",
+      "tistoryId": "d2",
+      "velogId": "sd",
+      "points": "7",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 5,
+      "userName": "asdf",
+      "password": "123",
+      "email": "kg",
+      "githubId": "ds",
+      "tistoryId": "d12",
+      "velogId": "sd1",
+      "points": "6",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 4,
+      "userName": "czxv",
+      "password": "123",
+      "email": "hh",
+      "githubId": "ef",
+      "tistoryId": "d32",
+      "velogId": "d1sd",
+      "points": "5",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 3,
+      "userName": "gasdfv",
+      "password": "32",
+      "email": "jj",
+      "githubId": "cd",
+      "tistoryId": "d12",
+      "velogId": "dww1ds",
+      "points": "4",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 11,
+      "userName": "dsqdsq",
+      "password": "4123",
+      "email": "fa",
+      "githubId": "sadf",
+      "tistoryId": "2e",
+      "velogId": "d1wsq",
+      "points": "4",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 2,
+      "userName": "asdas",
+      "password": "12",
+      "email": "kk",
+      "githubId": "ab",
+      "tistoryId": "a12",
+      "velogId": "12r1w",
+      "points": "3",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 10,
+      "userName": "cxzvxcv",
+      "password": "123",
+      "email": "hs",
+      "githubId": "f",
+      "tistoryId": "d3",
+      "velogId": "dqs",
+      "points": "3",
+      "role": "JUNIOR",
+      "createDate": null
+    },
+    {
+      "memberNum": 9,
+      "userName": "cvqweqw",
+      "password": "23",
+      "email": "sf",
+      "githubId": "as",
+      "tistoryId": "d2d",
+      "velogId": "d1dqs",
+      "points": "2",
+      "role": "JUNIOR",
+      "createDate": null
+    }
+  ]
+}

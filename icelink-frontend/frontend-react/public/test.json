@@ -1,0 +1,68 @@
+{
+  "boards": [
+    {
+      "BoardID": 1,
+      "BoardType": "gathering",
+      "BoardTitle": "프로젝트1",
+      "Write": "23/04/01",
+      "WriterName": "노현아",
+      "Description": "bla"
+    },
+    {
+      "BoardID": 2,
+      "BoardType": "gathering",
+      "BoardTitle": "프로젝트2",
+      "Write": "23/04/02",
+      "WriterName": "정호영",
+      "Description": "blabla"
+    },
+    {
+      "BoardID": 3,
+      "BoardType": "doing",
+      "BoardTitle": "프로젝트3",
+      "Write": "23/04/03",
+      "WriterName": "심준보",
+      "Description": "blablabla"
+    },
+    {
+      "BoardID": 4,
+      "BoardType": "doing",
+      "BoardTitle": "프로젝트4",
+      "Write": "23/04/04",
+      "WriterName": "이윤빈",
+      "Description": "blablablabla"
+    },
+    {
+      "BoardID": 5,
+      "BoardType": "doing",
+      "BoardTitle": "프로젝트5",
+      "Write": "23/04/05",
+      "WriterName": "박단비",
+      "Description": "blablablablabla"
+    },
+    {
+      "BoardID": 6,
+      "BoardType": "doing",
+      "BoardTitle": "프로젝트6",
+      "Write": "23/04/06",
+      "WriterName": "최민서",
+      "Description": "blablablablablabla"
+    },
+    {
+      "BoardID": 7,
+      "BoardType": "done",
+      "BoardTitle": "프로젝트7",
+      "Write": "23/04/07",
+      "WriterName": "권하진",
+      "Description": "blablablablablablabla"
+    },
+    {
+      "BoardID": 8,
+      "BoardType": "done",
+      "BoardTitle": "프로젝트8",
+      "Write": "23/04/08",
+      "WriterName": "나영수",
+      "Description": "blablablablablablablabla"
+    }
+  ]
+}
