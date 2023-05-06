@@ -2,7 +2,7 @@ import React from "react";
 function MyPage(props) {
   return (
     <div>
-      <div style={{ height: "500px", float: "left" }}>
+      <div style={{ height: "500px", float: "left" , marginLeft:"5%"}}>
         <h2>personal portfolio</h2>
         <h3> junjoy</h3>
         <h3> dream : product manager</h3>
@@ -28,8 +28,9 @@ function MyPage(props) {
       <div
         style={{
           float: "center",
-          marginLeft: "400px",
+          marginLeft: "430px",
           marginRight: "400px",
+          marginTop: "50px",
           border: "10px solid gray",
         }}
       >
@@ -40,8 +41,8 @@ function MyPage(props) {
       <div
         style={{
           float: "center",
-          marginTop: "5px",
-          marginLeft: "400px",
+          marginTop: "50px",
+          marginLeft: "430px",
           marginRight: "400px",
           border: "5px solid rgb(39, 26, 12)",
         }}
@@ -69,8 +70,8 @@ function MyPage(props) {
       <div
         style={{
           float: "center",
-          marginTop: "40px",
-          marginLeft: "400px",
+          marginTop: "50px",
+          marginLeft: "430px",
           marginRight: "400px",
           border: "10px solid gray",
         }}
@@ -83,7 +84,7 @@ function MyPage(props) {
         style={{
           float: "center",
           marginTop: "5px",
-          marginLeft: "400px",
+          marginLeft: "430px",
           marginRight: "400px",
           border: "5px solid rgb(39, 26, 12)",
         }}

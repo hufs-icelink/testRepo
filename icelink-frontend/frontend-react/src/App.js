@@ -5,14 +5,11 @@ import myPage from "./MyPage";
 import Board from "./Board";
 import SignIn from "./SignIn";
 
-class App extends Component {
-  render() {
+function App () {
     return (
-      <BrowserRouter>
-        <Header /> <br />
-      </BrowserRouter>
+      <div>
+      <Header /> <br /></div>
     );
-  }
 }
 
 export default App;
