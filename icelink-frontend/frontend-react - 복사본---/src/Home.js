@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "./style/Main.css";
+import "./style/Header.css";
 import profileimg from "./img/profileimg.png";
-import RankList from "./component/RankList";
 //import Rolling from "./Rolling";
-import axios from "axios";
 
+import axios from "axios";
 function Home(props) {
   const [message, setHello] = useState([]);
+
   useEffect(() => {
     axios
       .get("http://localhost:1819/api/xx")
       .then((response) => setHello(response.data))
       .catch((error) => console.log(error));
   }, []);
+
   return (
-    <div class="top-container">
+    <div>
       <div class="profile-container">
         <div class="profile">
           <img id="image" src={profileimg} height="200" />
@@ -44,9 +46,13 @@ function Home(props) {
           <p>추천</p>
         </div>
         <div class="record">
-          <p>랭킹 1~5등</p>
+          <p>랭킹 1~10등</p>
           <div class="recordList">
-            <RankList />
+            <p>1등: 노현아</p>
+            <p>2등: 현아아님</p>
+            <p>3등: gusdksepdy</p>
+            <p>4등: 뿌링클</p>
+            <p>5등: 레드윙</p>
           </div>
         </div>
       </div>

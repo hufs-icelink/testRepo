@@ -1,0 +1,17 @@
+.board-category{
+    margin-left:2%;
+    margin-right:2%;
+    height:40px;
+    background-color:rgba(129, 148, 255, 0.5);
+}
+
+.category-list{
+    display:flex;
+    margin-left:1%;
+}
+
+.list-write{
+    width:13%;
+    font-size:20px;
+    font-weight:800;
+}

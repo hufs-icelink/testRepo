@@ -6,11 +6,41 @@
     float:left;
 } */
 
-.logoLink, .myPageLink, .search, .boardLink, .signin, .signup{
+/*헤더 틀*/
+.header-container{
+    margin-top:30px;
+    margin-left:15%;
+    margin-right:15%;
+    width:70%;
+    height:57px;
+    border-radius:0.5rem;
+    background-color:rgb(255, 255, 255);
+}
+.header-inside{
+    display:inline-block;
+    justify-content:center;
+    text-align:center;
+    float:right;
+    width: 500px;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/*로고이미지*/
+.intro-logo{
+    width:170px;
+}
+
+.logoLink{
+    width:170px;
+    float:left;
+}
+/*헤더*/
+.home, .myPageLink, .boardLink, .signin, .signup{
     margin-top:2px;
-    width:80px;
+    margin-right:10px;
+    width:auto;
     height:20px;
     text-align:center;
-    border:1px solid black;
-    float:left;  
+    float:right;
 }

@@ -1,0 +1,13 @@
+.rolling-list {
+  margin:0;
+  padding:0;
+  list-style:none;
+  overflow:hidden;
+  height:30px;
+}
+
+.rolling li {
+  margin:0px;
+  padding:0px;
+  height:30px;
+}

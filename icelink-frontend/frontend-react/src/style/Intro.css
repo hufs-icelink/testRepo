@@ -1,0 +1,137 @@
+/*전체페이지 틀*/
+.top-container{
+    margin-left:15%;
+    margin-right:15%;
+    width:70%;
+    background-color:rgb(225, 252, 231);
+    height: 100%;
+}
+
+/*헤더 틀*/
+/*Main.css에 있음*/
+
+/*로고이미지*/
+.intro-logo{
+    width:170px;
+}
+
+/*소개 틀*/
+.introduction-container{
+    background-color:rgb(255, 255, 255);
+    height:700px;
+}
+
+/*웹이미지*/
+.intro-first{
+    float:right;
+    width:40%;
+    margin-right:8%;
+    object-fit: scale-down;
+}
+
+.introduction{
+    float:left;
+    width:40%;
+    margin-top:10%;
+    margin-left:3%;
+}
+
+#intro-write{
+    float:left;
+    height:150px;
+    margin-left:20%;
+    margin-top:20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    color:black;
+}
+
+#intro-write2{
+    float:left;
+    margin-left:20%;
+    color:black;
+    font-size: 15px;
+    float:left;
+}
+
+/*팀원 소개 틀*/
+.teammem-container{
+    background-color:rgba(129, 148, 255, 0.5);
+    width:100%;
+    height:530px;
+}
+
+.member-write{
+    display:flex;
+    justify-content:center;
+    font-size:25px;
+    font-weight: 500;
+    padding-top:20px;
+}
+
+.member-intro{
+    display:flex;
+    justify-content: center;
+}
+
+.member-name{
+    font-size:20px;
+    padding-top:30px;
+    text-align:Center;
+}
+
+/*각 팀원 소개 칸*/
+.member-setup{
+    box-shadow: 10px 10px 10px grey;
+    margin-top:30px;
+    float:left;
+    background-color:rgb(255, 255, 255);
+    width:22%;
+    height:250px;
+    border-radius:1rem;
+}
+
+/*심준보*/
+#sim{
+    margin-right:20px;
+}
+
+/*정호영*/
+#jung{
+    margin-right:20px;
+}
+
+/*노현아*/
+#rho{
+    margin-right:20px;
+}
+
+/*이윤빈*/
+#lee{
+}
+
+#name{
+    margin-top:30px;
+    font-weight:bold;
+    text-align:center;
+}
+
+#role{
+    text-align:center;
+}
+
+/*팀원 이미지*/
+.memimg{
+    display:flex;
+    margin:auto;
+    width:60%;
+    height:50%;
+    object-fit: scale-down;
+}
+
+/*연락*/
+.nothing-container{
+    height:100px;
+    background-color:rgb(255, 255, 255);
+}

@@ -3,7 +3,7 @@
 	display:flex;
 	flex-direction:column;
 	align-items:center;
-	margin-top: 21px;
+	margin-top: 50px;
 }
 .main-container .main-wrap{
 	width:768px;
@@ -18,32 +18,29 @@
 	height: 60px;
 }
 
-.main-container .main-wrap{
+.main-container .main-wrap header{
 	display:flex;	
 	flex-direction: column;
 	align-items: center;
 }
-
-.signUp-input-section-wrap{
+.login-input-section-wrap{
 	padding-top: 60px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.signUp-input-wrap{
+.login-input-wrap{
 	width: 465px;
 	height :48px;
 	border: solid 1px gray;
 	border-radius: 0.5rem;
 	background: white;
 }
-
-.padding-wrap{
+.password-wrap{
 	margin-top: 13px;
 }
-
-.signUp-input-wrap input{
+.login-input-wrap input{
 	border: none;
 	width:430px;
 	margin-top: 10px;
@@ -51,16 +48,15 @@
 	margin-left: 10px;
 	height:30px;
 }
-
-.signUp-button-wrap {
+.login-button-wrap {
 	padding-top: 13px;
 }
-.signUp-button-wrap button{
+.login-button-wrap button{
 	width: 465px;
 	height :48px;
 	font-size: 18px;
 	background: #000000;
 	color: white;
 	border: solid 1px #000000;
-	border-radius:0.5rem;
+	border-radius: 0.5rem;
 }

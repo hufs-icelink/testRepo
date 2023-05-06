@@ -1,0 +1,17 @@
+/* .logoLink{
+    width: 80px;
+    height:25px;
+    text-align:center;
+    border: 1px solid black;
+    float:left;
+} */
+
+.logoLink, .myPageLink, .search, .boardLink, .signin, .signup{
+    margin-top:2px;
+    width:80px;
+    height:20px;
+    text-align:center;
+    border:1px solid black;
+    float:left;  
+    clear:auto;
+}
