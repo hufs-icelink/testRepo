@@ -10,7 +10,10 @@
       "velogId": "d1wdw",
       "points": "8",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"Python",
+      "stack2":"C",
+      "stack3":"C++"
     },
     {
       "memberNum": 7,
@@ -22,7 +25,10 @@
       "velogId": "addqs",
       "points": "8",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"C++",
+      "stack2":"Java",
+      "stack3":"Python"
     },
     {
       "memberNum": 6,
@@ -34,7 +40,10 @@
       "velogId": "sd",
       "points": "7",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"CSS",
+      "stack2":"HTML",
+      "stack3":"React"
     },
     {
       "memberNum": 5,
@@ -46,7 +55,10 @@
       "velogId": "sd1",
       "points": "6",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"CSS",
+      "stack2":"HTML",
+      "stack3":"React"
     },
     {
       "memberNum": 4,
@@ -58,7 +70,10 @@
       "velogId": "d1sd",
       "points": "5",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"Python",
+      "stack2":"Java",
+      "stack3":"C"
     },
     {
       "memberNum": 3,
@@ -70,7 +85,10 @@
       "velogId": "dww1ds",
       "points": "4",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"Javascript",
+      "stack2":"React",
+      "stack3":"C"
     },
     {
       "memberNum": 11,
@@ -82,7 +100,10 @@
       "velogId": "d1wsq",
       "points": "4",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"Java",
+      "stack2":"Python",
+      "stack3":"C++"
     },
     {
       "memberNum": 2,
@@ -94,7 +115,10 @@
       "velogId": "12r1w",
       "points": "3",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"Java",
+      "stack2":"C",
+      "stack3":"C++"
     },
     {
       "memberNum": 10,
@@ -106,7 +130,10 @@
       "velogId": "dqs",
       "points": "3",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"Java",
+      "stack2":"Python",
+      "stack3":"C++"
     },
     {
       "memberNum": 9,
@@ -118,7 +145,10 @@
       "velogId": "d1dqs",
       "points": "2",
       "role": "JUNIOR",
-      "createDate": null
+      "createDate": null,
+      "stack1":"Java",
+      "stack2":"Python",
+      "stack3":"null"
     }
   ]
 }
