@@ -2,10 +2,15 @@
     background-color:white;
 }
 .myInfo-left{
-    height: "500px";
+    height: 500px;
     float: left;
     margin-right:2%;
     width:15%;
+}
+
+#myImage{
+    width:100%;
+    object-fit:scale-down;
 }
 
 .myInfo-first, .myInfo-link{

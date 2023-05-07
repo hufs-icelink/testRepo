@@ -2,7 +2,7 @@ import React from "react";
 import "./style/Main.css";
 import "./style/Board.css";
 import { useState, useCallback } from "react";
-import profileimg from "./img/profileimg.png";
+import Miniprofile from "./component/MiniProfile";
 import Categories from "./component/Categories"; // 컴포넌트 두개를 추가
 import BoardList from "./component/BoardList";
 import RankList from "./component/RankList";
@@ -12,12 +12,7 @@ function Board({ props }) {
   const onSelect = useCallback((category) => setCategory(category), []);
   return (
     <div class="top-container">
-      <div class="profile-container">
-        <div class="profile">
-          <img id="image" src={profileimg} height="200" />
-        </div>
-        <p>김정통</p>
-      </div>{" "}
+      <Miniprofile />{" "}
       <div class="middle">
         <div class="board-category">
           <div class="category-list">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style/Main.css";
-import profileimg from "./img/profileimg.png";
+import Miniprofile from "./component/MiniProfile";
 import RankList from "./component/RankList";
 //import Rolling from "./Rolling";
 import axios from "axios";
@@ -15,12 +15,7 @@ function Home(props) {
   }, []);
   return (
     <div class="top-container">
-      <div class="profile-container">
-        <div class="profile">
-          <img id="image" src={profileimg} height="200" />
-        </div>
-        <p>김정통</p>
-      </div>
+      <Miniprofile />
       <div class="middle">
         <div class="hotboard">
           <div class="gathering">

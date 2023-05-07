@@ -7,27 +7,7 @@
     height: 100%;
 }
 /* 왼쪽 미니프로필 */
-.profile-container{
-    width:16%;
-    height:300px;
-    border: 2px solid rgb(159, 159, 159);
-    border-radius: 0.5rem;
-    text-align:center;
-    float:left;
-    margin-top:2%;
-}
-.profile{
-    width:50px;
-    height:60px;
-    overflow:hidden;
-    margin-top:50px;
-    margin-left:37%;
-}
-img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+/*MiniProfile.css 에 있음*/
 
 /* 중앙게시판 */
 .middle{

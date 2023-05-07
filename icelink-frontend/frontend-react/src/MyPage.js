@@ -8,8 +8,8 @@ function MyPage(props) {
       <h2>personal portfolio</h2>
       <div class="myInfo-left">
         <div class="myInfo-first">
-          <div id="myImage">
-            <img src={myImg}></img>
+          <div id="myImageContainer">
+            <img id="myImage" src={myImg}></img>
           </div>
           <div id="myName"> junjoy</div>
           <div class="myOther">
