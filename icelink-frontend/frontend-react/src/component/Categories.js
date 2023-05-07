@@ -20,7 +20,7 @@ const categories = [
 ];
 
 const CategoriesBlock = styled.div`\
-  margin-top:3px;;
+  margin-top:6px;
   float:right;
   display: flex;
   overflow-x: auto;
@@ -41,7 +41,7 @@ const Category = styled.div`
   ${(props) =>
     props.active &&
     css`
-      font-weight: 600;
+      font-weight: 800;
       border-bottom: 2px solid #000000;
       color: #000000;
       &:hover {
@@ -49,7 +49,7 @@ const Category = styled.div`
       }
     `}
   &.active {
-    font-weight: 600;
+    font-weight: 800;
     border-bottom: 2px solid #000000;
     color: #22b8cf;
     &:hover {

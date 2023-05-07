@@ -16,7 +16,9 @@ function Intro() {
           <div class="introduction">
             <div id="intro-write">
               <p>
-                Are you ready to feel the connected experience
+                Are you ready to feel
+                <br />
+                the connected experience
                 <br />
                 of floating in the sky?
               </p>

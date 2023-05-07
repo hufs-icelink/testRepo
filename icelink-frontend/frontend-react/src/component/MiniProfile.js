@@ -4,10 +4,22 @@ import "../style/MiniProfile.css";
 function Miniprofile() {
   return (
     <div class="profile-container">
-      <div class="profile">
+      <div class="profile-img">
         <img id="image" src={profileimg} height="200" />
       </div>
-      <p>김정통</p>
+      <div class="profile-name">junjoy</div>
+      <div class="profile-info">
+        <div id="myDream">
+          [ dream ]
+          <br />
+          product manager
+        </div>
+        <div id="myStack">
+          [ stack ]
+          <br />
+          python{" "}
+        </div>
+      </div>
     </div>
   );
 }

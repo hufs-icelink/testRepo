@@ -3,11 +3,13 @@
     margin-right:2%;
     height:40px;
     background-color:rgba(129, 148, 255, 0.5);
+    border-radius:1rem;
+    box-shadow: 1px 1px 1px rgb(59, 81, 128);
 }
 
 .category-list{
     display:flex;
-    margin-left:1%;
+    margin-left:2%;
 }
 
 .list-write{
@@ -15,3 +17,80 @@
     font-size:20px;
     font-weight:800;
 }
+
+/*모집글 스타일*/
+#boardID{
+    float:left;
+}
+
+#boardTitle{
+    float:left;
+    width: auto;
+    height: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+}
+
+#boardFirstInfo{
+    float:left;
+    width:100%;
+}
+
+#boardMessage{
+    margin-top:10px;
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    border:0.5px solid #F2F2F2;
+    border-radius:0.5rem;
+}
+
+#needStack{
+    float:left;
+    width:100%;
+    margin-bottom:10px;
+}
+
+#need{
+    float:left;
+    margin-right:10px;
+    font-size:13px;
+}
+#needStackInfo{
+    float:left;
+}
+
+.stack{
+    background-color:lightgrey;
+    border-radius:0.5rem;
+    font-size:13px;
+    float:left;
+    margin-right:10px;
+    padding-left:5px;
+    padding-right:5px;
+    width:auto;
+    overflow:hidden;
+}
+
+#boardMessage{
+    margin-bottom:10px;
+}
+#boardWrite_day, #boardWriter{
+    font-size:13px;
+}
+
+#boardType{
+    float:left;
+    width:50px;
+    height:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:13px;
+    text-align:center;
+    border-radius:0.5rem;
+    font-weight:600;
+}
+
