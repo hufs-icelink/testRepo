@@ -1,5 +1,4 @@
 import React from "react";
-import logoimg from "./img/logo.png";
 import firstimg from "./img/intro_1.PNG";
 import simimg from "./img/member/sim.png";
 import jungimg from "./img/member/jung.png";

@@ -5,6 +5,7 @@ import logoimg from "./img/logo.png";
 import Home from "./Intro";
 import Mainpage from "./Home";
 import MyPage from "./MyPage";
+import Linking from "./Linking";
 import Board from "./Board";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
@@ -34,6 +35,11 @@ function Header(props) {
               공모전
             </Link>
           </div>
+          <div class="search">
+            <Link to="/link" style={{ textDecoration: "none" }}>
+              링크
+            </Link>
+          </div>
           <div class="myPageLink">
             <Link to="/myPage" style={{ textDecoration: "none" }}>
               {" "}
@@ -54,6 +60,7 @@ function Header(props) {
         <Route exact path="/" component={Home} />
         <Route path="/mainHome" component={Mainpage} />
         <Route path="/myPage" component={MyPage} />
+        <Route path="/link" component={Linking} />
         <Route path="/board" component={Board} />
         <Route path="/signIn" component={SignIn} />
         <Route path="/signUp" component={SignUp} />

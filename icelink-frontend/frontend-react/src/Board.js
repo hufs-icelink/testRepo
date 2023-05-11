@@ -12,7 +12,7 @@ function Board({ props }) {
   const onSelect = useCallback((category) => setCategory(category), []);
   return (
     <div class="top-container">
-      <Miniprofile />{" "}
+      <Miniprofile />
       <div class="middle">
         <div class="board-category">
           <div class="category-list">
@@ -23,7 +23,7 @@ function Board({ props }) {
             />
           </div>
         </div>
-        <div className="App">
+        <div class="App">
           <BoardList category={category} />
         </div>
       </div>
@@ -33,7 +33,9 @@ function Board({ props }) {
         </div>
         <div class="record">
           <p>랭킹 1~10등</p>
-          <RankList />
+          <div class="recordList">
+            <RankList />
+          </div>
         </div>
       </div>
     </div>
