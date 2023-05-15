@@ -21,7 +21,6 @@ function Check() {
 
   return (
     <div class="middle">
-      <div class="check-title">링크 검색</div>
       <div class="searchLink">
         <div class="check-category">카테고리*</div>
         <div class="checkbox-group">
