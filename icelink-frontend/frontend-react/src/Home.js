@@ -7,9 +7,10 @@ import axios from "axios";
 
 function Home(props) {
   const [message, setHello] = useState([]);
+  const num = [1, 2, 3, 4, 5];
   useEffect(() => {
     axios
-      .get("http://localhost:1819/api/xx")
+      .get("http://localhost:7777/member/getList")
       .then((response) => setHello(response.data))
       .catch((error) => console.log(error));
   }, []);
@@ -27,11 +28,6 @@ function Home(props) {
         </div>
         <div class="mainboard">
           <p>메인 게시판</p>
-          <ul>
-            {message.map((v, idx) => (
-              <li key={`${idx}-${v}`}>{v}</li>
-            ))}
-          </ul>
         </div>
       </div>
       <div class="right">
@@ -41,6 +37,13 @@ function Home(props) {
         <div class="record">
           <p>랭킹 1~5등</p>
           <div class="recordList">
+            <ul>
+              {message.map((v, idx) => (
+                <li key={`${idx}-${v}`}>
+                  {v.id} {v.points}
+                </li>
+              ))}
+            </ul>
             <RankList />
           </div>
         </div>
