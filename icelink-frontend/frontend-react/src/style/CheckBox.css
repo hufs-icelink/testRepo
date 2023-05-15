@@ -1,0 +1,17 @@
+#SearchData-Box{
+    float:left;
+    width:200px;
+    height:60px;
+    margin-left:5px;
+    margin-bottom:5px;
+    border-radius:0.5rem;
+    
+    box-shadow: 1px 1px 1px 1px lightgrey;
+}
+
+#SearchData-Name{
+    text-align:center;
+}
+
+.python-checkbox, .java-checkboc{
+}

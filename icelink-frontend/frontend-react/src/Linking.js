@@ -1,7 +1,7 @@
-import React from "react";
+import { React, useState } from "react";
 import Miniprofile from "./component/MiniProfile";
 import RankList from "./component/RankList";
-import Check from "./component/Check";
+import CheckBoard from "./component/CheckBoard";
 
 import "./style/MiniProfile.css";
 import "./style/Main.css";
@@ -10,7 +10,10 @@ function Link() {
   return (
     <div class="top-container">
       <Miniprofile />
-      <Check />
+      <div class="middle">
+        <CheckBoard />
+      </div>
+
       <div class="right">
         <div class="recommand">
           <p>추천</p>

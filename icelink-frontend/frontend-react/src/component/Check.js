@@ -1,37 +1,81 @@
 import React from "react";
+import JSONDATA from "../MOCK_DATA.json";
 import { useState } from "react";
 import "../style/Main.css";
 import "../style/Check.css";
+import "../style/CheckBox.css";
 
 function Check() {
-  const checkBoxList = [
-    "전체",
-    "Python",
-    "Java",
-    "C",
-    "C++",
-    "HTML",
-    "CSS",
-    "Javascript",
-    "React",
-  ];
+  const [pythonChecked, setpythonChecked] = useState(false);
+  const [javaChecked, setjavaChecked] = useState(false);
 
-  const [checkList, setCheckedlist] = useState();
-  const [isChecked, setIsChecked] = useState(false);
+  // 체크박스 상태에 따라 필터링된 데이터 생성
+  const filteredData = JSONDATA.filter((val) => {
+    if (pythonChecked && val.last_name === "python") {
+      return val;
+    }
+    if (javaChecked && val.last_name === "java") {
+      return val;
+    }
+    return false;
+  });
+
+  // 체크박스 상태 변경 함수
+  const handleCheckboxChange = (event) => {
+    const name = event.target.name;
+    const checked = event.target.checked;
+
+    if (name === "python") {
+      setpythonChecked(checked);
+    } else if (name === "java") {
+      setjavaChecked(checked);
+    }
+  };
+
+  // 필터링된 데이터 표시
+  const renderData = () => {
+    if (filteredData.length === 0) {
+      return <p>No results found.</p>;
+    }
+
+    return (
+      <ul>
+        {filteredData.map((val, key) => (
+          <li class="SearchData-Box" key={key}>
+            {val.first_name}
+          </li>
+        ))}
+      </ul>
+    );
+  };
 
   return (
-    <div class="middle">
-      <div class="searchLink">
-        <div class="check-category">카테고리*</div>
-        <div class="checkbox-group">
-          {checkBoxList.map((item, idx) => (
-            <div class="checkbox" key={idx}>
-              <input class="checkbox-box" type="checkbox" id={item} />
-              <div class="checkboxText">{item}</div>
-            </div>
-          ))}
-        </div>
+    <div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            class="python-checkbox"
+            name="python"
+            checked={pythonChecked}
+            onChange={handleCheckboxChange}
+          />
+          python
+        </label>
       </div>
+      <div>
+        <label>
+          <input
+            type="checkbox"
+            class="java-checkbox"
+            name="java"
+            checked={javaChecked}
+            onChange={handleCheckboxChange}
+          />
+          java
+        </label>
+      </div>
+      {renderData()}
     </div>
   );
 }

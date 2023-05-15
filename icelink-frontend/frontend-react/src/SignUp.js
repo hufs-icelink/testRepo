@@ -19,7 +19,7 @@ function createBtnHandle() {
 }
 
 function SignUp(props) {
-  const url = "/newMemFile.json";
+  const url = "/user/.json";
   const [Id, setId] = useState();
   const [name, setName] = useState();
   const [user_pw, setPW] = useState();
