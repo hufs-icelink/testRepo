@@ -1,6 +1,7 @@
 import React from "react";
 import JSONDATA from "../MOCK_DATA.json";
 import { useState } from "react";
+import userImage from "../img/profileimg.png";
 import "../style/Main.css";
 import "../style/Check.css";
 import "../style/CheckBox.css";
@@ -37,15 +38,15 @@ function Check() {
     if (filteredData.length === 0) {
       return <p>No results found.</p>;
     }
-
     return (
-      <ul>
+      <div class="SearchList">
         {filteredData.map((val, key) => (
-          <li class="SearchData-Box" key={key}>
-            {val.first_name}
-          </li>
+          <div id="SearchData-Box" className="user" key={key}>
+            <img id="SearchData-Image" src={userImage} />
+            <p id="SearchData-Name">{val.first_name}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     );
   };
 
