@@ -36,16 +36,35 @@ function Check() {
   // 필터링된 데이터 표시
   const renderData = () => {
     if (filteredData.length === 0) {
-      return <p>No results found.</p>;
+      return (
+        <div class="List">
+          <p>No results found.</p>
+          <div class="empty">
+            <hr />
+          </div>
+        </div>
+      );
     }
     return (
-      <div class="SearchList">
-        {filteredData.map((val, key) => (
-          <div id="SearchData-Box" className="user" key={key}>
-            <img id="SearchData-Image" src={userImage} />
-            <p id="SearchData-Name">{val.first_name}</p>
+      <div class="List">
+        checkbox를 사용하여 검색한 결과입니다.
+        <div class="SearchList">
+          {filteredData.map((val, key) => (
+            <div id="SearchData-Box" className="user" key={key}>
+              <img id="SearchData-Image" src={userImage} />
+              <div id="SearchData-Set">
+                <div id="SearchData-Name">{val.first_name}</div>
+              </div>
+              <div id="SearchData-Set2">
+                <div id="SearchData-Email-text">e-mail</div>
+                <div id="SearchData-Email">{val.email}</div>
+              </div>
+            </div>
+          ))}
+          <div class="empty">
+            <hr />
           </div>
-        ))}
+        </div>
       </div>
     );
   };

@@ -1,20 +1,42 @@
-#SearchList{
+#List{
+    margin-top:10px;;
 }
 
 #SearchData-Box{
     float:left;
     width:23%;
-    height:60px;
+    height:100px;
     margin-left:10px;
     margin-bottom:5px;
     border-radius:0.5rem;
     box-shadow: 1px 1px 1px 1px lightgrey;
 }
 
-#SearchData-Name{
+#SearchData-Set{
     float:left;
     margin-top:9%;
     margin-left:5%;
+}
+
+#SearchData-Set{
+    float:left;
+    margin-top:9%;
+    margin-left:5%;
+}
+
+#SearchData-Email-text{
+    float:left;
+    width:90%;
+    margin-top:4%;
+    margin-left:5%;
+    font-size:13px;
+}
+
+#SearchData-Email{
+    float:left;
+    width:90%;
+    margin-left:5%;
+    font-size:10px;
 }
 
 #SearchData-Image{
@@ -25,4 +47,11 @@
     margin-left:4%;
 }
 .python-checkbox, .java-checkboc{
+}
+
+.empty{
+    justify-content: center;
+    margin-left:1%;
+    width:95%;
+    height:20px;
 }

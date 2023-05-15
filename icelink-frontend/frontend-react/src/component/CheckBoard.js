@@ -15,8 +15,8 @@ function CheckBoard() {
           setSearchTerm(event.target.value);
         }}
       />
-
       <SearchBar />
+      타이핑하여 검색한 결과입니다.
       <div class="SearchList">
         {JSONDATA.filter((val) => {
           if (searchTerm == "") {
@@ -30,7 +30,13 @@ function CheckBoard() {
           return (
             <div id="SearchData-Box" className="user" key={key}>
               <img id="SearchData-Image" src={userImage} />
-              <p id="SearchData-Name">{val.first_name}</p>
+              <div id="SearchData-Set">
+                <div id="SearchData-Name">{val.first_name}</div>
+              </div>
+              <div id="SearchData-Set2">
+                <div id="SearchData-Email-text">e-mail</div>
+                <div id="SearchData-Email">{val.email}</div>
+              </div>
             </div>
           );
         })}
