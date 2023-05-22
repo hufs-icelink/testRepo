@@ -1,0 +1,43 @@
+.Write-container{
+    width:96%;
+    margin-top:20px;
+    margin-left:2%;
+    margin-right:2%;
+}
+
+.Write-ID{
+    width:100%;
+    height:30px;
+}
+.Write-Title{
+    width:100%;
+    height:30px;
+}
+.Write-Stack{
+    width:100%;
+    height:100px;
+}
+.Write-Text{
+    width:100%;
+    height:30px;
+}
+#writeID, #writeTitle, #wirteStack, #writeText{
+    float:left;
+    width:20%;
+    
+}
+#writeTitle-Input{
+    width:50%;
+}
+#writeStack-Input{
+    float:left;
+    width:80%
+}
+.checkbox{
+    height:10px;
+    float:left;
+}
+#writeText-Input{
+    width:70%;
+    height:100px;
+}
