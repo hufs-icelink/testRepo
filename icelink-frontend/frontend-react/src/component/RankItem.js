@@ -17,9 +17,9 @@ const RankItemBlock = styled.div`
 const RankItem = ({ rank }) => {
   const { userName, points } = rank;
   return (
-    <div class="memberBlock">
+    <div className="memberBlock">
       <RankItemBlock>
-        <div class="memberItem">
+        <div className="memberItem">
           <div id="memberContent">
             {userName}, 포인트: {points}
           </div>

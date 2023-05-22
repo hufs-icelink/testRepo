@@ -81,21 +81,21 @@ const BoardItem = ({ board }) => {
 
   return (
     <BoardItemBlock>
-      <div class="boardItem">
-        <div class="boardContent">
+      <div className="boardItem">
+        <div className="boardContent">
           <div id="boardFirstInfo">
             {BoardIDColor}
             <div id="boardTitle">{BoardTitle}</div>
           </div>
           <div id="needStack">
             <div id="need">개발</div>
-            <div class="stack" id="needStackInfo1">
+            <div className="stack" id="needStackInfo1">
               #{NeedStack1}
             </div>
-            <div class="stack" id="needStackInfo2">
+            <div className="stack" id="needStackInfo2">
               #{NeedStack2}
             </div>
-            <div class="stack" id="needStackInfo2">
+            <div className="stack" id="needStackInfo2">
               #{NeedStack3}
             </div>
           </div>

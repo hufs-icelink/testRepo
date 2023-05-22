@@ -13,40 +13,40 @@ import SignUp from "./SignUp";
 function Header(props) {
   return (
     <BrowserRouter>
-      <div class="header-container">
-        <div class="logoLink">
+      <div className="header-container">
+        <div className="logoLink">
           <Link to="/" style={{ textDecoration: "none" }}>
-            <img class="intro-logo" src={logoimg} />
+            <img className="intro-logo" src={logoimg} />
           </Link>
         </div>
-        <div class="header-inside">
-          <div class="signup">
+        <div className="header-inside">
+          <div className="signup">
             <Link to="/signUp" style={{ textDecoration: "none" }}>
               회원가입
             </Link>
           </div>
-          <div class="signin">
+          <div className="signin">
             <Link to="/signIn" style={{ textDecoration: "none" }}>
               로그인
             </Link>
           </div>
-          <div class="boardLink">
+          <div className="boardLink">
             <Link to="/board" style={{ textDecoration: "none" }}>
               공모전
             </Link>
           </div>
-          <div class="search">
+          <div className="search">
             <Link to="/link" style={{ textDecoration: "none" }}>
               링크
             </Link>
           </div>
-          <div class="myPageLink">
+          <div className="myPageLink">
             <Link to="/myPage" style={{ textDecoration: "none" }}>
               {" "}
               마이페이지
             </Link>
           </div>
-          <div class="home">
+          <div className="home">
             <Link to="/mainHome" style={{ textDecoration: "none" }}>
               메인페이지
             </Link>
