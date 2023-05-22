@@ -17,6 +17,10 @@ const categories = [
     name: "done",
     text: "완료",
   },
+  {
+    name: "write",
+    text: "새글 작성",
+  },
 ];
 
 const CategoriesBlock = styled.div`\
