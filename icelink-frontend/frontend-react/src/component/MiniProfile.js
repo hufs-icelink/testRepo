@@ -3,12 +3,12 @@ import "../style/MiniProfile.css";
 
 function Miniprofile() {
   return (
-    <div class="profile-container">
-      <div class="profile-img">
+    <div className="profile-container">
+      <div className="profile-img">
         <img id="image" src={profileimg} height="200" />
       </div>
-      <div class="profile-name">junjoy</div>
-      <div class="profile-info">
+      <div className="profile-name">junjoy</div>
+      <div className="profile-info">
         <div id="myDream">
           [ dream ]
           <br />

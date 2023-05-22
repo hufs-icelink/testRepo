@@ -17,9 +17,9 @@ function CheckBoard() {
       />
       <SearchBar />
       타이핑하여 검색한 결과입니다.
-      <div class="SearchList">
+      <div className="SearchList">
         {JSONDATA.filter((val) => {
-          if (searchTerm == "") {
+          if (searchTerm === "") {
             return val;
           } else if (
             val.last_name.toLowerCase().includes(searchTerm.toLowerCase())

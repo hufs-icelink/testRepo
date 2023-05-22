@@ -37,18 +37,18 @@ function Check() {
   const renderData = () => {
     if (filteredData.length === 0) {
       return (
-        <div class="List">
+        <div className="List">
           <p>No results found.</p>
-          <div class="empty">
+          <div className="empty">
             <hr />
           </div>
         </div>
       );
     }
     return (
-      <div class="List">
+      <div className="List">
         checkbox를 사용하여 검색한 결과입니다.
-        <div class="SearchList">
+        <div className="SearchList">
           {filteredData.map((val, key) => (
             <div id="SearchData-Box" className="user" key={key}>
               <img id="SearchData-Image" src={userImage} />
@@ -61,7 +61,7 @@ function Check() {
               </div>
             </div>
           ))}
-          <div class="empty">
+          <div className="empty">
             <hr />
           </div>
         </div>
