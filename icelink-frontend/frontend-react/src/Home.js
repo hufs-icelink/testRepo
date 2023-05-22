@@ -15,28 +15,28 @@ function Home(props) {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <div class="top-container">
+    <div className="top-container">
       <Miniprofile />
-      <div class="middle">
-        <div class="hotboard">
-          <div class="gathering">
+      <div className="middle">
+        <div className="hotboard">
+          <div className="gathering">
             <p>HOT 모집중</p>
           </div>
-          <div class="finished">
+          <div className="finished">
             <p>HOT 프로젝트</p>
           </div>
         </div>
-        <div class="mainboard">
+        <div className="mainboard">
           <p>메인 게시판</p>
         </div>
       </div>
-      <div class="right">
-        <div class="recommand">
+      <div className="right">
+        <div className="recommand">
           <p>추천</p>
         </div>
-        <div class="record">
+        <div className="record">
           <p>랭킹 1~5등</p>
-          <div class="recordList">
+          <div className="recordList">
             <ul>
               {message.map((v, idx) => (
                 <li key={`${idx}-${v}`}>

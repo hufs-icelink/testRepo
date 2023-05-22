@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 import Miniprofile from "./component/MiniProfile";
 import RankList from "./component/RankList";
 import CheckBoard from "./component/CheckBoard";
@@ -8,19 +8,19 @@ import "./style/Main.css";
 
 function Link() {
   return (
-    <div class="top-container">
+    <div className="top-container">
       <Miniprofile />
-      <div class="middle">
+      <div className="middle">
         <CheckBoard />
       </div>
 
-      <div class="right">
-        <div class="recommand">
+      <div className="right">
+        <div className="recommand">
           <p>추천</p>
         </div>
-        <div class="record">
+        <div className="record">
           <p>랭킹 1~5등</p>
-          <div class="recordList">
+          <div className="recordList">
             <RankList />
           </div>
         </div>

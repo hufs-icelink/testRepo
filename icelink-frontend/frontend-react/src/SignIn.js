@@ -11,28 +11,28 @@ function handleLoginBtnClick() {}
 
 function SignIn(props) {
   return (
-    <div class="main-container">
-      <div class="main-wrap">
-        <section class="login-input-section-wrap">
-          <form class="login-input-wrap">
+    <div className="main-container">
+      <div className="main-wrap">
+        <section className="login-input-section-wrap">
+          <form className="login-input-wrap">
             <input
               required
-              maxlength="10"
+              maxLength="10"
               id="userID"
               placeholder="User ID"
               type="text"
             ></input>
           </form>
-          <form class="login-input-wrap password-wrap">
+          <form className="login-input-wrap password-wrap">
             <input id="userPass" placeholder="Password" type="password"></input>
           </form>
-          <div class="login-button-wrap">
+          <div className="login-button-wrap">
             <button id="loginBtn" onClick={handleLoginBtnClick}>
               Sign in
             </button>
           </div>
           <br />
-          <div class="findPassword">
+          <div className="findPassword">
             <BrowserRouter>
               <Link to="/findPW" style={{ textDecoration: "none" }}>
                 비밀번호 찾기

@@ -33,16 +33,16 @@ function SignUp(props) {
   };
 
   return (
-    <div class="main-container">
-      <div class="main-wrap">
+    <div className="main-container">
+      <div className="main-wrap">
         <form
-          class="signUp-input-section-wrap"
+          className="signUp-input-section-wrap"
           action=""
           id="login"
           method="post"
           onSubmit={handleSubmit}
         >
-          <div class="signUp-input-wrap">
+          <div className="signUp-input-wrap">
             <input
               type="text"
               name="userName"
@@ -52,7 +52,7 @@ function SignUp(props) {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <div class="signUp-input-wrap padding-wrap">
+          <div className="signUp-input-wrap padding-wrap">
             <input
               type="text"
               name="userId"
@@ -62,7 +62,7 @@ function SignUp(props) {
               onChange={(e) => setId(e.target.value)}
             />
           </div>
-          <div class="signUp-input-wrap padding-wrap">
+          <div className="signUp-input-wrap padding-wrap">
             <input
               type="password"
               name="userPass"
@@ -72,7 +72,7 @@ function SignUp(props) {
               onChange={(e) => setPW(e.target.value)}
             />
           </div>
-          <div class="signUp-input-wrap padding-wrap">
+          <div className="signUp-input-wrap padding-wrap">
             <input
               type="email"
               name="userEmail"
@@ -92,7 +92,7 @@ function SignUp(props) {
           </div> */}
         </form>
 
-        <div class="signUp-button-wrap">
+        <div className="signUp-button-wrap">
           <button onClick={handleSubmit}>Sign Up</button>
         </div>
       </div>

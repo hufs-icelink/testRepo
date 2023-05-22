@@ -4,23 +4,23 @@ import "./style/MyPage.css";
 
 function MyPage(props) {
   return (
-    <div class="top-container">
+    <div className="top-container">
       <h2>personal portfolio</h2>
-      <div class="myInfo-left">
-        <div class="myInfo-first">
+      <div className="myInfo-left">
+        <div className="myInfo-first">
           <div id="myImageContainer">
             <img id="myImage" src={myImg}></img>
           </div>
           <div id="myName"> junjoy</div>
-          <div class="myOther">
+          <div className="myOther">
             <div id="myDream">dream : product manager</div>
             <div id="myStack">stack : python </div>
           </div>
         </div>
         <hr />
-        <div class="myInfo-link">
+        <div className="myInfo-link">
           <div id="mySite">More about</div>
-          <div class="myOther">
+          <div className="myOther">
             <div id="myInfo-github">
               <a href="https://github.com/mmmjunjoy">- github -</a>
             </div>
@@ -30,14 +30,14 @@ function MyPage(props) {
           </div>
         </div>
         <hr />
-        <div class="myInfo-projectsum">
+        <div className="myInfo-projectsum">
           <div id="projectsum-text">project summary</div>
-          <div class="myOther">
-            <div class="projectsum">
+          <div className="myOther">
+            <div className="projectsum">
               <div id="projectsum-title">- dacon</div>
               <div id="projectsum-info">모델 성능 높이기 대회 진행 중</div>
             </div>
-            <div class="projectsum">
+            <div className="projectsum">
               <div id="projectsum-title">- icelink</div>
               <div id="projectsum-info">frontend 제작 진행 중</div>
             </div>
@@ -45,9 +45,9 @@ function MyPage(props) {
         </div>
       </div>
 
-      <div class="myInfo-middle">
-        <div class="middle-info myInfo-short">
-          <div class="myInfo-middle-title" id="myInfo-shortIntro">
+      <div className="myInfo-middle">
+        <div className="middle-info myInfo-short">
+          <div className="myInfo-middle-title" id="myInfo-shortIntro">
             {" "}
             my short introduce
           </div>
@@ -60,8 +60,8 @@ function MyPage(props) {
             frontend 및 데이터 전처리를 학습하고 있습니다.
           </div>
         </div>
-        <div class="middle-info myInfo-main">
-          <div class="myInfo-middle-title" id="myInfo-mainIntro">
+        <div className="middle-info myInfo-main">
+          <div className="myInfo-middle-title" id="myInfo-mainIntro">
             {" "}
             my main introduce
           </div>
