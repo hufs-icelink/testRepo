@@ -1,5 +1,6 @@
 import "../style/WriteBoard.css";
 import "../style/Main.css";
+import React, { useState } from "react";
 
 function WriteBoard() {
   const checkBoxList = [
@@ -9,36 +10,111 @@ function WriteBoard() {
     "Java",
     "Python",
     "C",
-    "C++",
     "React",
   ];
+  const [writeType, setBoardType] = useState("모집중"); //BoardType
+  const [userId, setId] = useState(""); //작성자
+  const [stack, setStack] = useState({
+    //기술
+    HTML: "unCheck",
+    CSS: "unCheck",
+    Javascript: "unCheck",
+    Python: "unCheck",
+    C: "unCheck",
+    React: "unCheck",
+  });
+  const [title, setTitle] = useState(""); //board 제목
+  const [desc, setDesc] = useState(""); //board 내용
 
-  let maxChecked = 3;
-  let totalChecked = 0;
+  function returnDate() {
+    //board짝성 날짜
+    const today = new Date();
+    const time = {
+      year: today.getFullYear(), //현재 년도
+      month: today.getMonth() + 1, // 현재 월
+      date: today.getDate(), // 현제 날짜
+      hours: today.getHours(), //현재 시간
+      minutes: today.getMinutes(), //현재 분
+    };
+    const timestring = `${time.year}/${time.month}/${time.date} ${time.hours}:${time.minutes}`;
 
-  function checked(field) {
-    if (field.checked) {
-      totalChecked += 1;
-    } else {
-      totalChecked -= 1;
-    }
-
-    if (totalChecked > maxChecked) {
-      alert(
-        "최대 3개 까지만 선택가능합니다. 3개 이상일 경우 내용에다가 써주세요",
-      );
-    }
-    field.checked = false;
-    totalChecked -= 1;
+    return timestring;
   }
+  const writeDate = returnDate();
 
-  function ResetCount() {
-    totalChecked = 0;
-  }
+  const board = { writeType, userId, title, desc, writeDate }; //port 대상 -> axios 연결시 post때리기
+
+  const handleWriteSubmit = (e) => {
+    e.preventDefault();
+    console.log(board);
+    alert("작성완료");
+    // axios.post(url, { Id, name, user_pw, mail }).then((response) => {
+    //   console.log(response);
+    // });
+  };
+  // let maxChecked = 3;
+  // let totalChecked = 0;
+  // function checked(field) {
+  //   if (field.checked) {
+  //     totalChecked += 1;
+  //   } else {
+  //     totalChecked -= 1;
+  //   }
+
+  //   if (totalChecked > maxChecked) {
+  //     alert(
+  //       "최대 3개 까지만 선택가능합니다. 3개 이상일 경우 내용에다가 써주세요",
+  //     );
+  //   }
+  //   field.checked = false;
+  //   totalChecked -= 1;
+  // }
+
+  // function ResetCount() {
+  //   totalChecked = 0;
+  // }
 
   return (
     <div className="Write-container">
-      <form className="Write-form">
+      <form
+        className="Write-form"
+        action=""
+        id="writeBoard"
+        method="post"
+        onSubmit={handleWriteSubmit}
+      >
+        <div className="Write-BoardType">
+          <div id="wirteBoardType">유형</div>
+          <div id="writeBoardType-radio">
+            <input
+              type="radio"
+              name="writeType"
+              id="writeType-gather"
+              value="모집중"
+              checked={writeType === "모집중"}
+              onChange={(e) => setBoardType(e.target.value)}
+            />
+            모집중
+            <input
+              type="radio"
+              name="writeType"
+              id="writeType-doing"
+              value="진행중"
+              checked={writeType === "진행중"}
+              onChange={(e) => setBoardType(e.target.value)}
+            />
+            진행중
+            <input
+              type="radio"
+              name="writeType"
+              id="writeType-done"
+              value="완료"
+              checked={writeType === "완료"}
+              onChange={(e) => setBoardType(e.target.value)}
+            />
+            완료
+          </div>
+        </div>
         <div className="Write-ID">
           <div id="writeID">작성자</div>
           <input
@@ -47,6 +123,7 @@ function WriteBoard() {
             id="writeID-Input"
             placeholder=""
             type="text"
+            onChange={(e) => setId(e.target.value)}
           ></input>
         </div>
         <div className="Write-Title">
@@ -57,14 +134,21 @@ function WriteBoard() {
             id="writeTitle-Input"
             placeholder=""
             type="text"
+            onChange={(e) => setTitle(e.target.value)}
           ></input>
         </div>
         <div className="Write-Stack">
-          <div id="writeStack">개발</div>
+          <div id="writeStack">언어</div>
           <div id="writeStack-Input">
             {checkBoxList.map((item, idx) => (
               <div className="checkbox" key={idx}>
-                <input type="checkbox" id={item} />
+                <input
+                  type="checkbox"
+                  id={item}
+                  onChange={(e) => {
+                    console.log(e.target.id);
+                  }}
+                />
                 <label htmlFor={item}>{item}</label>
               </div>
             ))}
@@ -78,7 +162,12 @@ function WriteBoard() {
             id="writeText-Input"
             placeholder=""
             type="text"
+            onChange={(e) => setDesc(e.target.value)}
           ></textarea>
+        </div>
+
+        <div className="write-button-wrap">
+          <button onClick={handleWriteSubmit}>완료</button>
         </div>
       </form>
     </div>
