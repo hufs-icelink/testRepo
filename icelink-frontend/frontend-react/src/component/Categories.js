@@ -18,8 +18,12 @@ const categories = [
     text: "완료",
   },
   {
+    name: "mine",
+    text: "내 글",
+  },
+  {
     name: "write",
-    text: "새글 작성",
+    text: "글 작성",
   },
 ];
 
