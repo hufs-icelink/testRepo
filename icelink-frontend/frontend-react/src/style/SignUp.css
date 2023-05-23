@@ -64,3 +64,25 @@
 	border: solid 1px #000000;
 	border-radius:0.5rem;
 }
+
+.radio-wrap-name, .radio-wrap-type{
+	color:gray;
+	margin-top:13px;
+	margin-left:10px;
+	width:80px;
+	float:left;
+}
+.radio-wrap{
+	margin-top:10px;
+	width:150px;
+	float:left;
+	font-size:14px;
+}
+
+#userSex_M, #userSex_W, #userType_dev, #userType_com{
+	height:10px;
+	width:10px;
+}
+#userSex_W, #userType_com{
+	margin-left:40px;
+}

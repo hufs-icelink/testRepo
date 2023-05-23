@@ -3,42 +3,35 @@ import { useState } from "react";
 import "./style/SignUp.css";
 import axios from "axios";
 
-function createBtnHandle() {
-  /* 
-  const userId = document.getElementById("userID");
-  const userName = document.getElementById("userName");
-  const userPass = document.getElementById("userPass");
-  const userEmail = document.getElementById("userEmail");
-  alert("회원가입 되셨습니다. 로그인 하십시오.");
-  axios.post("/newMemFile", {
-    name: userName,
-    Id: userId,
-    user_pw: userPass,
-    mail: userEmail,
-  }); */
-}
-
 function SignUp(props) {
-  const url = "/user/.json";
   const [Id, setId] = useState();
   const [name, setName] = useState();
   const [user_pw, setPW] = useState();
   const [mail, setMail] = useState();
+  const [sex, setSex] = useState("남자");
+  const [type, setType] = useState("개발자");
+
+  const data = { Id, name, user_pw, mail, sex, type };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(url, { Id, name, user_pw, mail }).then((response) => {
-      console.log(response);
-    });
+    alert("회원가입 되셨습니다. 로그인 하십시오.");
+    // axios.post(url, { Id, name, user_pw, mail }).then((response) => {
+    //   console.log(response);
+    // });
+    console.log(data);
   };
-
+  // function createBtnHandle(props) {
+  //   alert("회원가입 되셨습니다. 로그인 하십시오.");
+  //   axios.post("/newMemFile", data);
+  // }
   return (
     <div className="main-container">
       <div className="main-wrap">
         <form
           className="signUp-input-section-wrap"
           action=""
-          id="login"
+          id="signUp"
           method="post"
           onSubmit={handleSubmit}
         >
@@ -72,6 +65,29 @@ function SignUp(props) {
               onChange={(e) => setPW(e.target.value)}
             />
           </div>
+          <div className="signUp-input-wrap padding-wrap ">
+            <div className="radio-wrap-name">성별</div>
+            <div className="radio-wrap">
+              <input
+                type="radio"
+                name="userSex"
+                id="userSex_M"
+                value="남자"
+                checked={sex === "남자"}
+                onChange={(e) => setSex(e.target.value)}
+              />
+              남자
+              <input
+                type="radio"
+                name="userSex"
+                id="userSex_W"
+                value="여자"
+                checked={sex === "여자"}
+                onChange={(e) => setSex(e.target.value)}
+              />
+              여자
+            </div>
+          </div>
           <div className="signUp-input-wrap padding-wrap">
             <input
               type="email"
@@ -81,6 +97,29 @@ function SignUp(props) {
               value={mail}
               onChange={(e) => setMail(e.target.value)}
             />
+          </div>
+          <div className="signUp-input-wrap padding-wrap ">
+            <div className="radio-wrap-type">유형</div>
+            <div className="radio-wrap">
+              <input
+                type="radio"
+                name="userType"
+                id="userType_dev"
+                value="개발자"
+                checked={type === "개발자"}
+                onChange={(e) => setType(e.target.value)}
+              />
+              개발자
+              <input
+                type="radio"
+                name="userType"
+                id="userType_com"
+                value="회사"
+                checked={type === "회사"}
+                onChange={(e) => setType(e.target.value)}
+              />
+              회사
+            </div>
           </div>
           {/*           <div class="signUp-input-wrap padding-wrap">
             <input
