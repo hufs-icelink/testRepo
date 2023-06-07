@@ -45,33 +45,33 @@ const BoardItem = ({ board }) => {
   let BoardIDColor = null;
   let BoardTypeInfo = null;
 
-  if (BoardType === "gathering") {
+  if (BoardType === "PART") {
     BoardIDColor = (
       <div id="boardID" style={{ backgroundColor: "#F6CECE" }}></div>
     );
-  } else if (BoardType === "doing") {
+  } else if (BoardType === "REC") {
     BoardIDColor = (
       <div id="boardID" style={{ backgroundColor: "#F3E2A9" }}></div>
     );
-  } else if (BoardType === "done") {
+  } else if (BoardType === "COMP") {
     BoardIDColor = (
       <div id="boardID" style={{ backgroundColor: "#D0F5A9" }}></div>
     );
   }
 
-  if (BoardType === "gathering") {
+  if (BoardType === "PART") {
     BoardTypeInfo = (
       <div id="boardType" style={{ backgroundColor: "#F6CECE" }}>
         모집중
       </div>
     );
-  } else if (BoardType === "doing") {
+  } else if (BoardType === "REC") {
     BoardTypeInfo = (
       <div id="boardType" style={{ backgroundColor: "#F3E2A9" }}>
         진행중
       </div>
     );
-  } else if (BoardType === "done") {
+  } else if (BoardType === "COMP") {
     BoardTypeInfo = (
       <div id="boardType" style={{ backgroundColor: "#D0F5A9" }}>
         완료

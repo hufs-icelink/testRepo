@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import BoardItem from "./BoardItem";
 import WriteBoard from "./WriteBoard";
+import ShowBoard from "./ShowBoard";
 import axios from "axios";
 
 const BoardListBlock = styled.div`
@@ -49,7 +50,9 @@ const BoardList = ({ category }) => {
   if (!boards) {
     return null;
   }
-
+  if (category === "mine") {
+    return <ShowBoard />;
+  }
   if (category === "write") {
     return <WriteBoard />;
   }

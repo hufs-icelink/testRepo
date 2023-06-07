@@ -7,13 +7,13 @@ import axios from "axios";
 
 function Home(props) {
   const [message, setHello] = useState([]);
-  const num = [1, 2, 3, 4, 5];
-  useEffect(() => {
-    axios
-      .get("http://localhost:7777/member/getList")
-      .then((response) => setHello(response.data))
-      .catch((error) => console.log(error));
-  }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8081/member/getList")
+  //     .then((response) => setHello(response.data))
+  //     .catch((error) => console.log(error));
+  // }, []);
   return (
     <div className="top-container">
       <Miniprofile />

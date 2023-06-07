@@ -2,7 +2,7 @@
   "boards": [
     {
       "BoardID": 1,
-      "BoardType": "gathering",
+      "BoardType": "PART",
       "BoardTitle": "프로젝트1",
       "NeedStack1" : "Python",
       "NeedStack2" : "C",
@@ -13,7 +13,7 @@
     },
     {
       "BoardID": 2,
-      "BoardType": "gathering",
+      "BoardType": "PART",
       "BoardTitle": "프로젝트2",
       "NeedStack1" : "Javascript",
       "NeedStack2" : "CSS",
@@ -24,7 +24,7 @@
     },
     {
       "BoardID": 3,
-      "BoardType": "doing",
+      "BoardType": "REC",
       "BoardTitle": "프로젝트3",
       "NeedStack1" : "Python",
       "NeedStack2" : "C++",
@@ -35,7 +35,7 @@
     },
     {
       "BoardID": 4,
-      "BoardType": "doing",
+      "BoardType": "REC",
       "BoardTitle": "프로젝트4",
       "NeedStack1" : "Python",
       "NeedStack2" : "C++",
@@ -46,7 +46,7 @@
     },
     {
       "BoardID": 5,
-      "BoardType": "doing",
+      "BoardType": "REC",
       "BoardTitle": "프로젝트5",
       "NeedStack1" : "Javascript",
       "NeedStack2" : "CSS",
@@ -57,7 +57,7 @@
     },
     {
       "BoardID": 6,
-      "BoardType": "doing",
+      "BoardType": "REC",
       "BoardTitle": "프로젝트6",
       "NeedStack1" : "Python",
       "NeedStack2" : "C",
@@ -68,7 +68,7 @@
     },
     {
       "BoardID": 7,
-      "BoardType": "done",
+      "BoardType": "COMP",
       "BoardTitle": "프로젝트7",
       "NeedStack1" : "Python",
       "NeedStack2" : "C",
@@ -79,7 +79,7 @@
     },
     {
       "BoardID": 8,
-      "BoardType": "done",
+      "BoardType": "COMP",
       "BoardTitle": "프로젝트8",
       "NeedStack1" : "Javascript",
       "NeedStack2" : "CSS",

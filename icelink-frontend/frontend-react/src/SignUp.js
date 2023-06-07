@@ -4,21 +4,33 @@ import "./style/SignUp.css";
 import axios from "axios";
 
 function SignUp(props) {
-  const [Id, setId] = useState();
+  const [id, setId] = useState();
+  const [userPassword, setPW] = useState();
   const [name, setName] = useState();
-  const [user_pw, setPW] = useState();
   const [mail, setMail] = useState();
   const [sex, setSex] = useState("남자");
-  const [type, setType] = useState("개발자");
+  const [role, setRole] = useState("Member");
+  const [ranking, setRanking] = useState(1);
 
-  const data = { Id, name, user_pw, mail, sex, type };
+  const data = { id, userPassword, name, mail, sex, role };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("회원가입 되셨습니다. 로그인 하십시오.");
-    // axios.post(url, { Id, name, user_pw, mail }).then((response) => {
-    //   console.log(response);
-    // });
+    axios
+      .post("/api/user/userRegister", {
+        id,
+        name,
+        userPassword,
+        mail,
+        sex,
+        role,
+        ranking,
+      })
+      .then((response) => {
+        console.log(response);
+        window.location.replace("/signIn");
+      });
     console.log(data);
   };
   // function createBtnHandle(props) {
@@ -51,7 +63,7 @@ function SignUp(props) {
               name="userId"
               id="userId"
               placeholder="User ID"
-              value={Id}
+              value={id}
               onChange={(e) => setId(e.target.value)}
             />
           </div>
@@ -61,7 +73,7 @@ function SignUp(props) {
               name="userPass"
               id="userPass"
               placeholder="Password"
-              value={user_pw}
+              value={userPassword}
               onChange={(e) => setPW(e.target.value)}
             />
           </div>
@@ -105,20 +117,29 @@ function SignUp(props) {
                 type="radio"
                 name="userType"
                 id="userType_dev"
-                value="개발자"
-                checked={type === "개발자"}
-                onChange={(e) => setType(e.target.value)}
+                value="Member"
+                checked={role === "Member"}
+                onChange={(e) => setRole(e.target.value)}
               />
               개발자
               <input
                 type="radio"
                 name="userType"
                 id="userType_com"
-                value="회사"
-                checked={type === "회사"}
-                onChange={(e) => setType(e.target.value)}
+                value="Enterprise"
+                checked={role === "Enterprise"}
+                onChange={(e) => setRole(e.target.value)}
               />
               회사
+              <input
+                type="radio"
+                name="userType"
+                id="userType_ad"
+                value="ADMIN"
+                checked={role === "ADMIN"}
+                onChange={(e) => setRole(e.target.value)}
+              />
+              관리자
             </div>
           </div>
           {/*           <div class="signUp-input-wrap padding-wrap">

@@ -3,6 +3,12 @@ import myImg from "./img/jjanggu.jpg";
 import "./style/MyPage.css";
 
 function MyPage(props) {
+  const name = sessionStorage.getItem("name");
+  return <div>{name === null ? outLog() : onLog()}</div>;
+}
+
+const onLog = () => {
+  const name = sessionStorage.getItem("name");
   return (
     <div className="top-container">
       <h2>personal portfolio</h2>
@@ -11,7 +17,7 @@ function MyPage(props) {
           <div id="myImageContainer">
             <img id="myImage" src={myImg}></img>
           </div>
-          <div id="myName"> junjoy</div>
+          <div id="myName">{name}</div>
           <div className="myOther">
             <div id="myDream">dream : product manager</div>
             <div id="myStack">stack : python </div>
@@ -76,6 +82,11 @@ function MyPage(props) {
       </div>
     </div>
   );
-}
+};
+
+const outLog = () => {
+  alert("로그인 해주세요!");
+  window.location.replace("/mainHome");
+};
 
 export default MyPage;

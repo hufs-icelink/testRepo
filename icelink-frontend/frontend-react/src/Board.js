@@ -11,11 +11,11 @@ function Board({ props }) {
   const [category, setCategory] = useState("all");
   const onSelect = useCallback((category) => setCategory(category), []);
   return (
-    <div class="top-container">
+    <div className="top-container">
       <Miniprofile />
-      <div class="middle">
-        <div class="board-category">
-          <div class="category-list">
+      <div className="middle">
+        <div className="board-category">
+          <div className="category-list">
             <Categories
               category={category}
               onSelect={onSelect}
@@ -23,17 +23,17 @@ function Board({ props }) {
             />
           </div>
         </div>
-        <div class="App">
+        <div className="App">
           <BoardList category={category} />
         </div>
       </div>
-      <div class="right">
-        <div class="recommand">
+      <div className="right">
+        <div className="recommand">
           <p>추천</p>
         </div>
-        <div class="record">
+        <div className="record">
           <p>랭킹 1~10등</p>
-          <div class="recordList">
+          <div className="recordList">
             <RankList />
           </div>
         </div>

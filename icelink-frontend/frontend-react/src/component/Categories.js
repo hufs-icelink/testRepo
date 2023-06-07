@@ -6,15 +6,15 @@ const categories = [
     text: "전체보기",
   },
   {
-    name: "gathering",
+    name: "PART",
     text: "모집중",
   },
   {
-    name: "doing",
+    name: "REC",
     text: "진행중",
   },
   {
-    name: "done",
+    name: "COMP",
     text: "완료",
   },
   {

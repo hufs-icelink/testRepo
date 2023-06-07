@@ -1,56 +1,51 @@
 import "../style/WriteBoard.css";
 import "../style/Main.css";
+import axios from "axios";
 import React, { useState } from "react";
 
 function WriteBoard() {
-  const checkBoxList = [
-    "HTML",
-    "CSS",
-    "Javascript",
-    "Java",
-    "Python",
-    "C",
-    "React",
-  ];
-  const [writeType, setBoardType] = useState("모집중"); //BoardType
-  const [userId, setId] = useState(""); //작성자
-  const [stack, setStack] = useState({
-    //기술
-    HTML: "unCheck",
-    CSS: "unCheck",
-    Javascript: "unCheck",
-    Python: "unCheck",
-    C: "unCheck",
-    React: "unCheck",
-  });
+  // const checkBoxList = [
+  //   "HTML",
+  //   "CSS",
+  //   "Javascript",
+  //   "Java",
+  //   "Python",
+  //   "C",
+  //   "React",
+  // ];
+  const [boardType, setBoardType] = useState("PART"); //BoardType
+  const [userName, setName] = useState("");
+  // const [stack, setStack] = useState({
+  //   //기술
+  //   HTML: "unCheck",
+  //   CSS: "unCheck",
+  //   Javascript: "unCheck",
+  //   Python: "unCheck",
+  //   C: "unCheck",
+  //   React: "unCheck",
+  // });
   const [title, setTitle] = useState(""); //board 제목
-  const [desc, setDesc] = useState(""); //board 내용
+  const [content, setContent] = useState(""); //board 내용
 
-  function returnDate() {
-    //board짝성 날짜
-    const today = new Date();
-    const time = {
-      year: today.getFullYear(), //현재 년도
-      month: today.getMonth() + 1, // 현재 월
-      date: today.getDate(), // 현제 날짜
-      hours: today.getHours(), //현재 시간
-      minutes: today.getMinutes(), //현재 분
-    };
-    const timestring = `${time.year}/${time.month}/${time.date} ${time.hours}:${time.minutes}`;
-
-    return timestring;
-  }
-  const writeDate = returnDate();
-
-  const board = { writeType, userId, title, desc, writeDate }; //port 대상 -> axios 연결시 post때리기
+  const board = { boardType, title, content }; //port 대상 -> axios 연결시 post때리기
+  const userId = sessionStorage.getItem("id");
+  const name = sessionStorage.getItem("name");
 
   const handleWriteSubmit = (e) => {
     e.preventDefault();
     console.log(board);
     alert("작성완료");
-    // axios.post(url, { Id, name, user_pw, mail }).then((response) => {
-    //   console.log(response);
-    // });
+    axios
+      .post("http://localhost:8081/api/board/boardWrite", {
+        userId,
+        name,
+        title,
+        content,
+        boardType,
+      })
+      .then((response) => {
+        console.log(response);
+      });
   };
   // let maxChecked = 3;
   // let totalChecked = 0;
@@ -90,8 +85,8 @@ function WriteBoard() {
               type="radio"
               name="writeType"
               id="writeType-gather"
-              value="모집중"
-              checked={writeType === "모집중"}
+              value="PART"
+              checked={boardType === "PART"}
               onChange={(e) => setBoardType(e.target.value)}
             />
             모집중
@@ -99,8 +94,8 @@ function WriteBoard() {
               type="radio"
               name="writeType"
               id="writeType-doing"
-              value="진행중"
-              checked={writeType === "진행중"}
+              value="REC"
+              checked={boardType === "REC"}
               onChange={(e) => setBoardType(e.target.value)}
             />
             진행중
@@ -108,24 +103,14 @@ function WriteBoard() {
               type="radio"
               name="writeType"
               id="writeType-done"
-              value="완료"
-              checked={writeType === "완료"}
+              value="COMP"
+              checked={boardType === "COMP"}
               onChange={(e) => setBoardType(e.target.value)}
             />
             완료
           </div>
         </div>
-        <div className="Write-ID">
-          <div id="writeID">작성자</div>
-          <input
-            required
-            maxLength="10"
-            id="writeID-Input"
-            placeholder=""
-            type="text"
-            onChange={(e) => setId(e.target.value)}
-          ></input>
-        </div>
+
         <div className="Write-Title">
           <div id="writeTitle">제목</div>
           <input
@@ -137,23 +122,6 @@ function WriteBoard() {
             onChange={(e) => setTitle(e.target.value)}
           ></input>
         </div>
-        <div className="Write-Stack">
-          <div id="writeStack">언어</div>
-          <div id="writeStack-Input">
-            {checkBoxList.map((item, idx) => (
-              <div className="checkbox" key={idx}>
-                <input
-                  type="checkbox"
-                  id={item}
-                  onChange={(e) => {
-                    console.log(e.target.id);
-                  }}
-                />
-                <label htmlFor={item}>{item}</label>
-              </div>
-            ))}
-          </div>
-        </div>
         <div className="Write-Text">
           <div id="writeText">내용</div>
           <textarea
@@ -162,7 +130,7 @@ function WriteBoard() {
             id="writeText-Input"
             placeholder=""
             type="text"
-            onChange={(e) => setDesc(e.target.value)}
+            onChange={(e) => setContent(e.target.value)}
           ></textarea>
         </div>
 
